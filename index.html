@@ -138,6 +138,8 @@ h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:tex
 .proj-body h3{font-family:'Syne',sans-serif;font-size:21px;font-weight:700;line-height:1.25}
 .proj-body p{font-size:14.5px;color:var(--muted)}
 .proj-body .tags{margin-top:auto;padding-top:6px}
+.proj-link{display:inline-flex;align-items:center;gap:8px;width:fit-content;padding-bottom:2px;font-size:14px;font-weight:500;color:var(--acc);border-bottom:1px solid rgba(77,214,165,.35);transition:.25s}
+.proj-link:hover{color:var(--txt);border-bottom-color:var(--txt)}
 .proj-shot .badge{position:absolute;left:14px;bottom:14px;padding:5px 12px;border-radius:99px;background:rgba(10,14,20,.78);backdrop-filter:blur(8px);border:1px solid var(--line);font-size:12.5px;color:var(--txt);pointer-events:none}
 
 /* ============ Value ============ */
@@ -330,6 +332,22 @@ footer .top:hover{color:var(--acc)}
   <div class="proj-grid">
 
     <article class="proj-card reveal d1">
+      <button type="button" class="proj-shot" data-title="Gestion de locations courte durée" data-images="" aria-label="Aperçu du projet de gestion de locations courte durée">
+        <div class="ph"><b>🏠</b><span>Capture d'écran à venir</span></div>
+        <img alt="Capture d'écran de l'application de gestion de locations courte durée" loading="lazy">
+        <span class="zoom">🔍 Agrandir</span>
+      </button>
+      <div class="proj-body">
+        <span class="proj-kind">Application web</span>
+        <h3>Gestion de locations courte durée</h3>
+        <p>Plateforme de gestion de locations saisonnières : suivi des logements, calendrier des réservations, disponibilités et gestion des voyageurs depuis une interface unique.</p>
+        <a class="proj-link" href="https://short-term-rental-management.vercel.app/" target="_blank" rel="noopener">Voir le site en ligne <span>↗</span></a>
+        <div class="tags"><span class="tag">Gestion des réservations</span><span class="tag">Tableau de bord</span><span class="tag">Responsive</span></div>
+      </div>
+    </article>
+
+
+    <article class="proj-card reveal d2">
       <button type="button" class="proj-shot" data-title="Application de location de voitures" data-images="assets/renting.png,assets/renting2.png,assets/renting3.png" aria-label="Agrandir la capture : application de location de voitures">
         <div class="ph"><b>🚗</b><span>Capture d'écran à venir</span></div>
         <img alt="Capture d'écran de l'application de location de voitures" loading="lazy">
@@ -343,7 +361,7 @@ footer .top:hover{color:var(--acc)}
       </div>
     </article>
 
-    <article class="proj-card reveal d2">
+    <article class="proj-card reveal d3">
       <button type="button" class="proj-shot" data-title="Site e-commerce" data-images="assets/Eccomerce.png,assets/Eccomerce2.png,assets/Eccomerce3.png,assets/Eccomerce4.png" aria-label="Agrandir la capture : site e-commerce">
         <div class="ph"><b>🛒</b><span>Capture d'écran à venir</span></div>
         <img alt="Capture d'écran du site e-commerce" loading="lazy">
