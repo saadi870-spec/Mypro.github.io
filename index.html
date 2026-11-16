@@ -119,6 +119,29 @@ h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:tex
 .tag{font-size:13px;padding:7px 14px;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.02);color:var(--txt);transition:.25s}
 .tag:hover{border-color:var(--acc);color:var(--acc);transform:translateY(-2px)}
 
+/* ============ Projects ============ */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px}
+.proj-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:.35s}
+.proj-card:hover{transform:translateY(-6px);border-color:rgba(77,214,165,.35);background:rgba(77,214,165,.03)}
+.proj-shot{position:relative;display:block;width:100%;aspect-ratio:16/10;padding:0;border:0;border-bottom:1px solid var(--line);background:var(--bg2);overflow:hidden;cursor:default;font:inherit;color:inherit}
+.proj-shot.has-img{cursor:zoom-in}
+.proj-shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .7s cubic-bezier(.2,.7,.3,1)}
+.proj-card:hover .proj-shot img{transform:scale(1.05)}
+.proj-shot .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;color:var(--muted);font-size:13px;
+  background:radial-gradient(ellipse 70% 80% at 30% 20%,rgba(77,214,165,.12),transparent 60%),radial-gradient(ellipse 70% 80% at 80% 90%,rgba(58,160,255,.12),transparent 60%),var(--bg2)}
+.proj-shot .ph b{font-size:46px;line-height:1;filter:saturate(.9)}
+.proj-shot.has-img .ph{display:none}
+.proj-shot .zoom{position:absolute;right:14px;bottom:14px;padding:6px 14px;border-radius:99px;background:rgba(10,14,20,.78);backdrop-filter:blur(8px);border:1px solid var(--line);font-size:12.5px;color:var(--txt);opacity:0;transform:translateY(6px);transition:.3s;pointer-events:none}
+.proj-shot.has-img:hover .zoom,.proj-shot.has-img:focus-visible .zoom{opacity:1;transform:none}
+.proj-body{padding:26px 28px 30px;display:flex;flex-direction:column;gap:12px;flex:1}
+.proj-kind{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--acc)}
+.proj-body h3{font-family:'Syne',sans-serif;font-size:21px;font-weight:700;line-height:1.25}
+.proj-body p{font-size:14.5px;color:var(--muted)}
+.proj-body .tags{margin-top:auto;padding-top:6px}
+.proj-link{display:inline-flex;align-items:center;gap:8px;width:fit-content;padding-bottom:2px;font-size:14px;font-weight:500;color:var(--acc);border-bottom:1px solid rgba(77,214,165,.35);transition:.25s}
+.proj-link:hover{color:var(--txt);border-bottom-color:var(--txt)}
+.proj-shot .badge{position:absolute;left:14px;bottom:14px;padding:5px 12px;border-radius:99px;background:rgba(10,14,20,.78);backdrop-filter:blur(8px);border:1px solid var(--line);font-size:12.5px;color:var(--txt);pointer-events:none}
+
 /* ============ Value ============ */
 #valeur{max-width:1180px}
 .value-wrap{background:linear-gradient(120deg,rgba(77,214,165,.07),rgba(58,160,255,.07));border:1px solid var(--line);border-radius:24px;padding:clamp(34px,5vw,60px);display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center}
@@ -299,6 +322,59 @@ footer .top:hover{color:var(--acc)}
         <span class="tag">Automatisation de tâches</span><span class="tag">Simplification des process</span>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projets">
+  <div class="sec-label reveal">03 — Projets</div>
+  <h2 class="reveal d1">Quelques réalisations</h2>
+  <div class="proj-grid">
+
+    <article class="proj-card reveal d1">
+      <button type="button" class="proj-shot" data-title="Gestion de locations courte durée" data-images="" aria-label="Aperçu du projet de gestion de locations courte durée">
+        <div class="ph"><b>🏠</b><span>Capture d'écran à venir</span></div>
+        <img alt="Capture d'écran de l'application de gestion de locations courte durée" loading="lazy">
+        <span class="zoom">🔍 Agrandir</span>
+      </button>
+      <div class="proj-body">
+        <span class="proj-kind">Application web</span>
+        <h3>Gestion de locations courte durée</h3>
+        <p>Plateforme de gestion de locations saisonnières : suivi des logements, calendrier des réservations, disponibilités et gestion des voyageurs depuis une interface unique.</p>
+        <a class="proj-link" href="https://short-term-rental-management.vercel.app/" target="_blank" rel="noopener">Voir le site en ligne <span>↗</span></a>
+        <div class="tags"><span class="tag">Gestion des réservations</span><span class="tag">Tableau de bord</span><span class="tag">Responsive</span></div>
+      </div>
+    </article>
+
+
+    <article class="proj-card reveal d2">
+      <button type="button" class="proj-shot" data-title="Application de location de voitures" data-images="assets/renting.png,assets/renting2.png,assets/renting3.png" aria-label="Agrandir la capture : application de location de voitures">
+        <div class="ph"><b>🚗</b><span>Capture d'écran à venir</span></div>
+        <img alt="Capture d'écran de l'application de location de voitures" loading="lazy">
+        <span class="zoom">🔍 Agrandir</span>
+      </button>
+      <div class="proj-body">
+        <span class="proj-kind">Application web</span>
+        <h3>Location de voitures</h3>
+        <p>Plateforme de réservation de véhicules : catalogue de voitures, consultation des disponibilités, réservation en ligne et suivi des locations côté administration.</p>
+        <div class="tags"><span class="tag">Laravel</span><span class="tag">React.js</span><span class="tag">MySQL</span></div>
+      </div>
+    </article>
+
+    <article class="proj-card reveal d3">
+      <button type="button" class="proj-shot" data-title="Site e-commerce" data-images="assets/Eccomerce.png,assets/Eccomerce2.png,assets/Eccomerce3.png,assets/Eccomerce4.png" aria-label="Agrandir la capture : site e-commerce">
+        <div class="ph"><b>🛒</b><span>Capture d'écran à venir</span></div>
+        <img alt="Capture d'écran du site e-commerce" loading="lazy">
+        <span class="zoom">🔍 Agrandir</span>
+      </button>
+      <div class="proj-body">
+        <span class="proj-kind">E-commerce</span>
+        <h3>Boutique en ligne</h3>
+        <p>Site de vente en ligne : catalogue de produits, panier, commandes et interface d'administration pour gérer les produits, les stocks et les ventes.</p>
+        <div class="tags"><span class="tag">Laravel</span><span class="tag">React.js</span><span class="tag">MySQL</span></div>
+      </div>
+    </article>
+
   </div>
 </section>
 
